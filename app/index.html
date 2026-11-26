@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NusaData: Statistik Indonesia</title>
+<meta name="description" content="Indonesia in numbers: population, economy, employment, poverty and prices, with every figure sourced. A static site that works offline.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">
+    <span class="brand-name">NusaData<span class="dot">.</span></span>
+    <span class="brand-tag">Statistik Indonesia — figures with sources, offline by design</span>
+  </div>
+  <nav aria-label="Sections">
+    <a href="#/overview">Overview</a>
+    <a href="#/population">Population</a>
+    <a href="#/economy">Economy</a>
+    <a href="#/employment">Employment &amp; Poverty</a>
+    <a href="#/prices">Prices &amp; Inflation</a>
+    <a href="#/provinces">Provinces</a>
+    <a href="#/sources">Data &amp; Sources</a>
+  </nav>
+</header>
+<main id="view" aria-live="polite"></main>
+<footer class="site-footer">
+  <p>NusaData is an independent statistics site. Figures are the published values of BPS (Statistics Indonesia) and the World Bank; each figure names its source and year on the page where it appears. The site is a set of static files and makes no network request.</p>
+</footer>
+<script type="module" src="main.js"></script>
+</body>
+</html>
