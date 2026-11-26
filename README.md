@@ -1,3 +1,7 @@
+[![make.fun bounty](https://make.fun/badge/best-national-statistics-site-20261126-0539.svg)](https://make.fun/bounty/best-national-statistics-site-20261126-0539)
+[![rank](https://make.fun/badge/best-national-statistics-site-20261126-0539/Aldrinxjarot/national-statistics-site/rank.svg)](https://make.fun/bounty/best-national-statistics-site-20261126-0539)
+[![reward](https://make.fun/badge/best-national-statistics-site-20261126-0539/Aldrinxjarot/national-statistics-site/reward.svg)](https://make.fun/bounty/best-national-statistics-site-20261126-0539)
+
 # NusaData — Statistik Indonesia
 
 A national statistics site for Indonesia, built as plain static files that
