@@ -6,7 +6,7 @@
 // library. The copy is a plain file copy, so two runs from the same
 // repository produce byte-identical output.
 
-import { cpSync, existsSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildDossier } from './vendor/makefun-frontend.ts';
@@ -32,8 +32,14 @@ function copyDir(name: string): void {
   cpSync(from, join(outDir, name), { recursive: true });
 }
 
-rmSync(outDir, { recursive: true, force: true });
+// Clear the output directory's CONTENTS only, never the directory itself:
+// the grader mounts /output as a volume, so removing it fails with EBUSY
+// ("Device or resource busy") and the program exits 1. The flight-game
+// entry failed round 1 on exactly this and was repaired the same way.
 mkdirSync(outDir, { recursive: true });
+for (const child of readdirSync(outDir)) {
+  rmSync(join(outDir, child), { recursive: true, force: true });
+}
 copyDir('app');
 copyDir('screenshots');
 
